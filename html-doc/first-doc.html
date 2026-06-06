@@ -19,15 +19,100 @@
     </style>
     <title>Conversion Template Form</title>
     <body> 
-       <nav>
-            <ul class="breadcrumb">
-                <li><a href="/">Administration</a></li>
-                <li><a href="/converter_admin/">Dynamic Converter Admin</a></li>
-                <li aria-current="page"><span>Dynamic Converter New HTML Form</span></li>
-            </ul>
-        </nav> 
-
-    
-
+        <div class="main_form">
+            <div class="header">
+                <nav>
+                    <ul class="breadcrumb">
+                        <li><a href="/">Administration</a></li>
+                        <li><a href="/converter_admin/">Dynamic Converter Admin</a></li>
+                        <li aria-current="page"><span>Dynamic Converter New HTML Form</span></li>
+                    </ul>
+                </nav> 
+            </div>
+            <div class="top_block">
+                <p><span>* Content ID</span> <input type="text"></p> 
+                <p><span>* Type</span>  
+                    
+                    <select>
+                        
+                        <option>ADACCT - Acme Accaunting Department</option>
+                        <option>item_2</option>
+                        <option>item_3</option>
+                        
+                    </select>
+                </p>
+                <p>
+                    <span>* Title</span> 
+                    <input type="text">
+                </p>
+                <p>
+                    <span>* Filer</span>
+                    <input type="text">
+                    <select>
+                        <option>sysadmin</option>
+                        <option>item_2</option>
+                        <option>item_3</option>
+                    </select>
+                </p>
+                <p>
+                    <span>* Security Group</span>
+                    <select>
+                        <option>Public</option>
+                        <option>Private</option>
+                    </select>
+                </p>
+            </div>
+            <div class="middle_block">
+                <p>
+                    <span>Template Format</span>
+                    <input type="radio">HTML ConversionTemplate</input>
+                    <input type="radio">Classic HTML Conversion Template</input>
+                </p>
+            </div>
+            <div class="bottom_block">
+                <p>
+                    <span>* Revision</span>
+                    <input type="number" min="0" value="1">
+                </p>
+                <p>
+                    <span>Folder</span> 
+                    <input type="text">
+                    <button type="file">Browse...</button>
+                </p>
+                <p>
+                    <span>Hidden</span>
+                    <select>
+                        <option></option>
+                        <option>true</option>
+                        <option>false</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" rows="4" cols="50"></textarea>
+                </p>
+                <p>
+                    <label for="user-access-list">User Access List</label>
+                    <textarea id="user-access-list" rows="4" cols="50"></textarea>
+                </p>
+                <p>
+                    <label for="trash-delete-old-name">Trash Delete Old Name</label>
+                    <textarea id="trash-delete-old-name" rows="4" cols="50"></textarea>
+                </p>
+                <p>
+                    <span>Trash Delete Location</span> 
+                    <input type="text">
+                    <button type="file">Browse...</button>
+                </p>
+                </p>
+                    <span>Trash Delete Date</span> 
+                    <input type="date">
+                    <button type="calendar">
+                        <img src="calendar-icon.png" alt="Calendar Icon">
+                    </button>
+                </p>
+            </div>
+            
+        </div>
 
     </body>
