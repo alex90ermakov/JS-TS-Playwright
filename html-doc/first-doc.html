@@ -16,11 +16,18 @@
         .breadcrumb li span {
             color: gray;
         }
+        .middle_block {
+            margin-top: 20px;
+            margin-left: 20px;
+            color: red;
+        }
     </style>
     <title>Conversion Template Form</title>
     <body> 
-        <div class="main_form">
-            <div class="header">
+        <div class="page">
+            <form action="mailto:example@mail.ru" method="post" enctype="multipart/form-data">  
+            <header class="header">
+                <h1>Dynamic Converter New HTML Conversion Template Form</h1>
                 <nav>
                     <ul class="breadcrumb">
                         <li><a href="/">Administration</a></li>
@@ -28,26 +35,25 @@
                         <li aria-current="page"><span>Dynamic Converter New HTML Form</span></li>
                     </ul>
                 </nav> 
-            </div>
-            <div class="top_block">
-                <p><span>* Content ID</span> <input type="text"></p> 
-                <p><span>* Type</span>  
-                    
-                    <select>
-                        
+            </header>
+            <main class="main_form">
+            <section class="top_block">
+                <p><label for="content-id">* Content ID</label> 
+                    <input type="text" id="content-id">
+                </p> 
+                <p><label for="type">* Type</label>
+                    <select id="type">
                         <option>ADACCT - Acme Accaunting Department</option>
                         <option>item_2</option>
-                        <option>item_3</option>
-                        
-                    </select>
+                        <option>item_3</option>                    </select>
                 </p>
                 <p>
-                    <span>* Title</span> 
-                    <input type="text">
+                    <label for="title">* Title</label>
+                    <input type="text" id="title">
                 </p>
                 <p>
-                    <span>* Filer</span>
-                    <input type="text">
+                    <label for="filer">* Filer</label>
+                    <input type="text" id="filer">
                     <select>
                         <option>sysadmin</option>
                         <option>item_2</option>
@@ -55,33 +61,43 @@
                     </select>
                 </p>
                 <p>
-                    <span>* Security Group</span>
-                    <select>
+                    <label for="security-group">* Security Group</label>
+                    <select id="security-group">
                         <option>Public</option>
                         <option>Private</option>
                     </select>
                 </p>
-            </div>
-            <div class="middle_block">
+            </section>
+            <section class="middle_block">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="label-cell"> 
+                                <label for="template-format">Template Format</label>
+                            </td>
+                            <td class="input-cell">
+                                <input type="radio" id="template-format" name="template-format" value="html" checked>HTML ConversionTemplate</label>
+                            </td>
+                            <td class="input-cell">
+                                <input type="radio" id="template-format" name="template-format" value="classic-html">Classic HTML Conversion Template</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="bottom_block">
                 <p>
-                    <span>Template Format</span>
-                    <input type="radio">HTML ConversionTemplate</input>
-                    <input type="radio">Classic HTML Conversion Template</input>
+                    <label for="revision">* Revision</label>
+                    <input type="number" id="revision" min="0" value="1">
                 </p>
-            </div>
-            <div class="bottom_block">
                 <p>
-                    <span>* Revision</span>
-                    <input type="number" min="0" value="1">
-                </p>
-                <p>
-                    <span>Folder</span> 
-                    <input type="text">
+                    <label for="folder">Folder</label>
+                    <input type="text" id="folder">
                     <button type="file">Browse...</button>
                 </p>
                 <p>
-                    <span>Hidden</span>
-                    <select>
+                    <label for="hidden">Hidden</label>
+                    <select id="hidden">
                         <option></option>
                         <option>true</option>
                         <option>false</option>
@@ -111,8 +127,9 @@
                         <img src="calendar-icon.png" alt="Calendar Icon">
                     </button>
                 </p>
-            </div>
-            
+            </section>
+            </main>
+            </form>
         </div>
 
     </body>
