@@ -21,6 +21,14 @@
             margin-left: 20px;
             color: red;
         }
+        label{
+            margin-right: 50px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        input, select, textarea{
+            margin-left: 30px;
+        }
     </style>
     <title>Conversion Template Form</title>
     <body> 
@@ -116,14 +124,14 @@
                     <textarea id="trash-delete-old-name" rows="4" cols="50"></textarea>
                 </p>
                 <p>
-                    <span>Trash Delete Location</span> 
-                    <input type="text">
-                    <button type="file">Browse...</button>
+                    <label for="trash-delete-location">Trash Delete Location</span> 
+                    <input id="trash-delete-location" type="text">
+                    <button id="trash-delete-location" type="file">Browse...</button>
                 </p>
                 </p>
-                    <span>Trash Delete Date</span> 
-                    <input type="date">
-                    <button type="calendar">
+                    <label for="trash-delete-date">Trash Delete Date</label> 
+                    <input id="trash-delete-date" type="date">
+                    <button id="trash-delete-date" type="calendar">
                         <img src="calendar-icon.png" alt="Calendar Icon">
                     </button>
                 </p>
